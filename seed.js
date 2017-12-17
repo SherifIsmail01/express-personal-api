@@ -1,15 +1,61 @@
 // This file allows us to seed our application with data
 // simply run: `node seed.js` from the root of this project folder.
 
-// var db = require('./models');
+var db = require('./models');
 
-// var new_campsite = {description: "Sharp rocks. Middle of nowhere."}
+var characters = [
+{
+name: "Spider-Man",
+Abilities: ["Web-Slinger", "Swingin'", "Thwip, Thwip, Pow!"], 
+image: "./images/Spider-Man-Free-Download-PNG.png"
+}, {
+name: "Iron-Man",
+Abilities: ["Repulsor Ray", "Uni-Beam", "Billion-Dollar Punch"], 
+image: "./images/Iron-Man-PNG-Image.png"
+}, {
+name: "Captain-America",
+Abilities: ["Shield Bash", "Shield Toss", "American Justice"], 
+image: "./images/Doctor-Strange-PNG-Image.png"
+}, {
+name: "Dead-Pool",
+Abilities: ["Spinning Groin Punch", "Spinny Sword Attack", "Hold Up"], 
+image: "./images/Doctor-Strange-PNG-Image.png"
+}, {
+name: "Ultron",
+Abilities: ["Encephalo-Ray", "Eradication"], 
+image: "./images/Doctor-Strange-PNG-Image.png"
+}, {
+name: "Black-Panther",
+Abilities: ["Roundhouse Tactical Strikes", "Panther Strike", "For Wakanda!"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}, {
+name: "Guillotine",
+Abilities: ["La Force d'Ancetres", "Coup de Massue", "Coup de Grace"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}, {
+name: "Storm",
+Abilities: ["Lightning Strike", "Gale", "Tempest"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}, {
+name: "Winter-Soldier",
+Abilities: ["Deuces are wild", "Fist of the Red Army"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}, {
+name: "Groot",
+Abilities: ["Grow limbs into Earth", "I am Groot"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}, {
+name: "DareDevil",
+Abilities: ["Stick Strike", "Flash Kick", "Deliverance"], 
+image: "./images/Doctor-Strange-PNG-Image.png"	
+}
+]
 
-// db.Campsite.create(new_campsite, function(err, campsite){
+// db.Character.create(new_character, function(err, campsite){
 //   if (err){
 //     return console.log("Error:", err);
 //   }
 
-//   console.log("Created new campsite", campsite._id)
+//   console.log("Created new character", character._id)
 //   process.exit(); // we're all done! Exit the program.
 // })
