@@ -1,4 +1,2 @@
-module.exports = {
-	api: require('./apiControllers'),
-	characters: require('./charactersControllers')
-}
+module.exports.api = require('./apiControllers');
+module.exports.characters = require('./charactersControllers');

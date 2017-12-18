@@ -1,16 +1,17 @@
 console.log("Sanity Check: JS is working!");
 
+
 $(document).ready(function(){
-console.log ('jquery');
 // your code
-$.ajax({
-	method: 'GET',
-	url: '/api/characters',
-	success: onSuccess,
-	error: function (err) {
-		console.log (err);
-	}
-});
+
+    $.ajax({
+    	method: 'GET',
+    	url: '/api',
+    	success: onSuccess,
+    	error: function (err) {
+    		console.log (err);
+    	}
+    });
 
 
 });
@@ -18,17 +19,14 @@ $.ajax({
 console.log (characters);
 
 
-function onSuccess(characters) {
-	for (var i = 0; i < characters.length; i++) {
-		renderCharacter(characters[i]);
-	}
-};
+
+
 
 function renderCharacter(characters){
-	var listedCharacters = (` 
-                  <div class='row'>
+
+   var listedCharacters =   `<div class='row'>
                     <div class="col-xs-3 col-xs-6 thumbnail character-art">
-                      <img src="" alt="character image">
+                      <img src="${characters.image}" alt="character image">
                     </div>
 
                     <div class="col-xs-6 col-xs-8">
@@ -44,7 +42,21 @@ function renderCharacter(characters){
                       </ul>
                     </div>
 
-                  </div>
-	`)
-	$('#Characters').prepend(listedCharacters);
+                  </div>`
+
+          $('#Characters').prepend(listedCharacters);
 };
+
+function onSuccess(json) {
+  characters.forEach(function(characters){
+      renderCharacter(characters);
+  })
+  
+};
+
+
+
+
+
+
+

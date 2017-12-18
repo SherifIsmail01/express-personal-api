@@ -1,6 +1,6 @@
 // require express and other modules
-var express = require('express'),
-    app = express();
+var express = require('express');
+var app = express();
 
 // parse incoming urlencoded form data
 // and populate the req.body object
@@ -27,7 +27,7 @@ app.use(function(req, res, next) {
 
 // Serve static files from the `/public` directory:
 // i.e. `/images`, `/scripts`, `/styles`
-app.use(express.static('public'));
+app.use(express.static('public', {root: __dirname}));
 
 /*
  * HTML Endpoints
