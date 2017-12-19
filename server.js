@@ -48,9 +48,6 @@ app.post('/api/characters', controllers.characters.create);
 app.put('/api/characters', controllers.characters.update);
 app.delete('/api/characters', controllers.characters.destroy);
 
-
-
-
 // app.get('/api', function apiIndex(req, res) {
 //   // TODO: Document all your api endpoints below as a simple hardcoded JSON object.
 //   // It would be seriously overkill to save any of this to your database.
