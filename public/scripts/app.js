@@ -13,19 +13,42 @@ $(document).ready(function(){
     	}
     });
 
+//form submit handler that does ajax post request
+    $('#character-form').on('submit', function (e) {
+      console.log ('new character created', $('#character-form').serialize());
+
+      $.ajax({
+        method:'POST',
+        url: '/api/characters',
+        data: $('#character-form').serialize(),
+        success: postNewCharacter,
+        error: function (err) {
+          console.log('Error: ' + err);
+        }
+      });
+    });
+
+    $('#Characters').on('click', '.delete-character', function(e) {
+      console.log ('clicked delete button to', '/api/characters' + $('.delete-character').attr('data-id'));
+
+      $.ajax({
+        method: 'DELETE',
+        url: '/api/characters/' + $('.delete-character').attr('data-id'),
+        success: deleteCharacterSuccess,
+        error: deleteCharacterError
+      });
+
+
+    });
+    
 
 });
-
-// console.log (characters);
-
-
-
 
 
 function renderCharacter(character){
 
    var listedCharacter =   ` 
-          <div class="row character" data-character-id="character._id">
+          <div class="row character">
 
             <div class="col-xs-8 col-xs-offset-1">
               <div class="panel panel-default">
@@ -36,15 +59,15 @@ function renderCharacter(character){
                       <img src="${character.image}" alt="character image">
                     </div>
 
-                    <div class="col-xs-6 col-xs-8">
+                    <div class="col-xs-6 col-xs-8 pull-right">
                       <ul class="list-group">
                         <li class="list-group-item">
                           <h4 class='inline-header'>Character Name:</h4>
-                          <span class='character-name'>${character.name}</span>
+                          <span class='character-name' required>${character.name}</span>
                         </li>
                         <li class="list-group-item">
                           <h4 class='inline-header'>Abilities:</h4>
-                          <span class='Abilities'>${character.abilities}</span>
+                          <span class='Abilities' required>${character.abilities.join(', ')}</span>
                         </li>
                       </ul>
                     </div>
@@ -52,6 +75,7 @@ function renderCharacter(character){
                   </div>
                                     <div class='panel-footer'>
                     <button class='btn btn-primary add-song'>Add Power/Ability</button>
+                    <button class='.delete-character btn btn-danger pull-right' data-id=${character._id}>Delete Character</button>
                   </div>
 
                 </div>
@@ -74,8 +98,28 @@ function onSuccess(characters) {
   });
 };
 
+function postNewCharacter(newData) {
+  console.log(newData);
 
+  renderCharacter(newData);
+}
 
+function deleteCharacterSuccess (characters) {
+  var character = json;
+  var characterId = character._id;
+
+  for (var index = o; index < characters.length; index++) {
+    if (characters[index]._id === characterId) {
+      characters.splice(index, 1);
+      break;
+    }
+  }
+  renderCharacter(characters);
+}
+
+function deleteCharacterError() {
+  console.log('delete character error');
+}
 
 
 

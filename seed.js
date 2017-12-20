@@ -19,23 +19,23 @@ var characters = [
 	}, {
 		name: "Dead-Pool",
 		abilities: ["Spinning Groin Punch", "Spinny Sword Attack", "Hold Up"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"
+		image: "/images/5863ef947d90850fc3ce2974.png"
 	}, {
 		name: "Ultron",
 		abilities: ["Encephalo-Ray", "Eradication"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"
+		image: "/images/Ultron-PNG-Image.png"
 	}, {
 		name: "Black-Panther",
 		abilities: ["Roundhouse Tactical Strikes", "Panther Strike", "For Wakanda!"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"	
+		image: "/images/Black-Panther-PNG-Clipart.png"	
 	}, {
 		name: "Guillotine",
 		abilities: ["La Force d'Ancetres", "Coup de Massue", "Coup de Grace"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"	
+		image: "/images/GachaChasePrize_256x256_guillotine.png"	
 	}, {
 		name: "Storm",
 		abilities: ["Lightning Strike", "Gale", "Tempest"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"	
+		image: "/images/Storm.png"	
 	}, {
 		name: "Winter-Soldier",
 		abilities: ["Deuces are wild", "Fist of the Red Army"], 
@@ -43,11 +43,11 @@ var characters = [
 	}, {
 		name: "Groot",
 		abilities: ["Grow limbs into Earth", "I am Groot"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"	
+		image: "/images/groot_render_by_maydaypayday-d9pjic2.png"	
 	}, {
 		name: "DareDevil",
 		abilities: ["Stick Strike", "Flash Kick", "Deliverance"], 
-		image: "/images/Doctor-Strange-PNG-Image.png"	
+		image: "/images/Daredevil-PNG.png"	
 	}
 ];
 

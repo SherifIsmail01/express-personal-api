@@ -13,17 +13,28 @@ function index(req, res) {
 
 
 function create(req, res) {
-
+  var newCharacter = new db.Character({
+    name: req.body.name,
+    abilities: req.body.abilities,
+    image: req.body.image
+  });
+  newCharacter.save(function (err, newCharacterInDb) {
+    res.json(newCharacterInDb);
+  });
 }
 
 // GET /api/characters/:characterId
 function show(req, res) {
-  // find one album by id and send it back as JSON
+  // find one character by id and send it back as JSON
 }
 
 // DELETE /api/characters/:characterId
 function destroy(req, res) {
-  // find one album by id, delete it, and send it back as JSON
+  // find one character by id, delete it, and send it back as JSON
+  var characterId = req.params.id;
+  db.Character.find({ _id: characterId }).remove(function(err, character) {
+    res.json(character);
+  });
 }
 
 // PUT or PATCH /api/character/:characterId

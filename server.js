@@ -44,9 +44,9 @@ app.get('/', function homepage(req, res) {
 
 app.get('/api', controllers.api.index);
 app.get('/api/characters', controllers.characters.index);
-// app.post('/api/characters', controllers.characters.create);
-// app.put('/api/characters', controllers.characters.update);
-// app.delete('/api/characters', controllers.characters.destroy);
+app.post('/api/characters', controllers.characters.create);
+app.put('/api/characters', controllers.characters.update);
+app.delete('/api/characters', controllers.characters.destroy);
 
 
 
