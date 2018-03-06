@@ -32,8 +32,8 @@ function show(req, res) {
 function destroy(req, res) {
   // find one character by id, delete it, and send it back as JSON
   var characterId = req.params.id;
-  db.Character.find({ _id: characterId }).remove(function(err, character) {
-    res.json(character);
+  db.Character.findByIdAndRemove(characterId, function(err, deletedCharacter) {
+    res.json(deletedCharacter);
   });
 }
 

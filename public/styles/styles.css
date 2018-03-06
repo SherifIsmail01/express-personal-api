@@ -10,11 +10,14 @@ h1 {
 }
 
 #Characters {
-	width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
 
+.character-image {
+  background-color: #0B243B;
 }
 
 .list-group {
@@ -24,11 +27,15 @@ h1 {
 /*body, html {
 	background: url("/images/Marvel-Heroes-Logo.jpg") no-repeat center center;
     height: 100%;
+}*/
+
+.new_character_section {
+  color: white;
 }
 
-.jumbotron{
+.jumbotron {
     background: url("/images/Marvel-Heroes-Logo.jpg") no-repeat center center;
-    height: 100%;*/
+    height: 90%;
 }
 
 h1, h4 {
@@ -51,4 +58,12 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+
+.row {
+	font-size: 17px;
+}
+legend {
+	color: white;
 }
